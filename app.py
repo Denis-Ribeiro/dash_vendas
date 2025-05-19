@@ -4,14 +4,13 @@ from dash import dcc, html, Input, Output
 import plotly.express as px
 import os
 
-# Caminho relativo para os arquivos na pasta 'data'
-data_dir = "data"
-df_2020 = pd.read_excel(os.path.join(data_dir, "Base Vendas - 2020.xlsx"))
-df_2021 = pd.read_excel(os.path.join(data_dir, "Base Vendas - 2021.xlsx"))
-df_2022 = pd.read_excel(os.path.join(data_dir, "Base Vendas - 2022.xlsx"))
-df_clientes = pd.read_excel(os.path.join(data_dir, "Cadastro Clientes.xlsx"), header=2)
-df_lojas = pd.read_excel(os.path.join(data_dir, "Cadastro Lojas.xlsx"))
-df_produtos = pd.read_excel(os.path.join(data_dir, "Cadastro Produtos.xlsx"))
+
+df_2020 = pd.read_excel("Base Vendas - 2020.xlsx")
+df_2021 = pd.read_excel("Base Vendas - 2021.xlsx")
+df_2022 = pd.read_excel("Base Vendas - 2022.xlsx")
+df_clientes = pd.read_excel("Cadastro Clientes.xlsx", header=2)
+df_lojas = pd.read_excel("Cadastro Lojas.xlsx")
+df_produtos = pd.read_excel("Cadastro Produtos.xlsx")
 
 # Unificar dados de vendas
 df = pd.concat([df_2020, df_2021, df_2022], ignore_index=True)
