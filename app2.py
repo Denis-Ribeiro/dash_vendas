@@ -204,4 +204,4 @@ def update_graficos(tipo, marcas, produto, lojas, cliente):
 
 # Rodar servidor local
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run_server(debug=True)
